@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designora | AI Interior Design Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: #fafaf9; }
+    .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .dark .glass { background: rgba(10,10,10,0.85); }
+    .gold-text { background: linear-gradient(135deg,#d4a853,#f0cc7a,#c9952e); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .gold-btn { background: linear-gradient(135deg,#d4a853,#c9952e); color:#fff; }
+    .gold-btn:hover { background: linear-gradient(135deg,#c9952e,#b07d1e); }
+    .shimmer-bg { background: linear-gradient(90deg,#f5f5f5 25%,#e8e8e8 50%,#f5f5f5 75%); background-size:200% 100%; animation: shimmer 1.5s infinite; }
+    .dark .shimmer-bg { background: linear-gradient(90deg,#1a1a1a 25%,#222 50%,#1a1a1a 75%); background-size:200% 100%; }
+    @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes scaleIn { from{opacity:0;transform:scale(0.95) translateY(10px)} to{opacity:1;transform:scale(1) translateY(0)} }
+    @keyframes slideDown { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
+    .animate-fade-up { animation: fadeUp 0.5s ease-out forwards; }
+    .animate-scale-in { animation: scaleIn 0.2s ease-out forwards; }
+    .animate-slide-down { animation: slideDown 0.15s ease-out forwards; }
+    .custom-scrollbar::-webkit-scrollbar{width:4px;height:4px}
+    .custom-scrollbar::-webkit-scrollbar-thumb{background:#d4a853;border-radius:10px}
+    input[type=range]{accent-color:#d4a853}
+    .card-hover{transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}
+    .card-hover:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.1)}
+    .dark .card-hover:hover{box-shadow:0 20px 40px rgba(0,0,0,0.5)}
+    .font-display{font-family:'Playfair Display',serif}
+  </style>
+  <script type="importmap">{"imports":{"react/":"https://esm.sh/react@^19.2.4/","react":"https://esm.sh/react@^19.2.4","react-dom/":"https://esm.sh/react-dom@^19.2.4/","@google/genai":"https://esm.sh/@google/genai@^1.40.0"}}</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-slate-900 dark:text-slate-100">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
